@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256"
+   height="256"
+   viewBox="0 0 256 256"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="clocks.svg"
+   inkscape:export-filename="C:\Users\brassers_pov\Dropbox\projects\wrecords.ru static\public\img\clocks.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.5006058"
+     inkscape:cx="23.814294"
+     inkscape:cy="112.69883"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="745"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     units="px">
+    <sodipodi:guide
+       position="525.71429,230"
+       orientation="1,0"
+       id="guide4138" />
+    <sodipodi:guide
+       position="150,377.14286"
+       orientation="0,1"
+       id="guide4140" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-796.36219)">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 127.85714,925.21933 Z"
+       id="path5165"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:8.69999981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 218.5784,896.09198 c 0,11.79976 -4.02641,108.81282 -28.77792,114.82072 -11.74145,2.85 -15.4477,-63.29181 -41.37333,-34.65459 -22.7318,25.10929 -24.01923,-28.37297 -57.797081,-46.51305 -14.745332,-7.91884 -53.311807,-15.067 -53.311801,-33.65308 -6e-6,-18.58608 40.576456,-33.65308 90.630062,-33.65308 50.05361,0 90.63006,15.067 90.63007,33.65308 z"
+       id="path5187"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Layer 2">
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:8.69999981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path5201"
+       cx="148.44005"
+       cy="109.39255"
+       rx="12.161755"
+       ry="6.9971743"
+       inkscape:export-filename="C:\Users\brassers_pov\Dropbox\projects\wrecords.ru static\public\img\rect5209.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:8.69999981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 148.67917,108.05976 2.85373,0 c 0.22477,0 0.40573,1.84444 0.40573,4.1355 0,0 2.47387,2.30593 2.59168,13.02606 0.1178,23.2073 -2.59168,37.34593 -2.59168,37.34593 -0.15861,2.28556 -1.51376,4.42705 -1.73853,4.42705 -3.63911,0.48298 -1.91879,-1.77054 -1.92666,-4.42705 0,0 2.82729,-15.31667 2.47387,-36.2857 0.35342,-9.54209 -2.47387,-14.08629 -2.47387,-14.08629 -0.3963,-2.25652 0.18096,-4.1355 0.40573,-4.1355 z"
+       id="rect5207"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssscscccss"
+       inkscape:export-filename="C:\Users\brassers_pov\Dropbox\projects\wrecords.ru static\public\img\rect5209.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="matrix(0.94852581,0.31669983,-0.31669983,0.94852581,0,0)"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:8.69999981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 97.084584,55.709047 79.405976,-0.551641 c 0.22477,-0.0016 0.40573,0.743033 0.40573,1.665994 0,0.92296 0.60104,1.032307 0.37626,1.032307 l -82.488224,0 c -0.224774,0 -1.187723,-0.109347 -1.187723,-1.032307 0,-0.922961 3.263212,-1.112791 3.487981,-1.114353 z"
+       id="rect5209"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\brassers_pov\Dropbox\projects\wrecords.ru static\public\img\rect5209.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>
