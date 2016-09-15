@@ -1,0 +1,31 @@
+#one a {
+  text-decoration: none;
+  border-bottom: none; }
+
+#one li span.icon {
+  -o-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s; }
+
+div.form {
+  width: 400px; }
+
+#banner img.logo {
+  display: block;
+  position: relative;
+  width: 100px;
+  height: auto;
+  margin: 0 auto 50px auto;
+}
+
+header img.logo {
+  display: inline-block;
+  height: 80%;
+  width: auto;
+  float: left;
+  padding: 0.4em 0 0 0;
+  margin-right: 0.6em;
+}
+
+/*# sourceMappingURL=custom.css.map */
