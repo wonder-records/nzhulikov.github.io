@@ -31,3 +31,18 @@ header img.logo {
   padding: 0.4em 0 0 0;
   margin-right: 0.6em;
 }
+
+.map-wrapper {
+  position: relative;
+}
+
+.map-overlay {
+    width  : 100%;
+    height : 300px;
+    background: black;
+    position: absolute;
+    opacity: 0.5;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+}
