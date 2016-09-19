@@ -5,7 +5,7 @@
     // Stop form from submitting normally
     event.preventDefault();
 
-    var submitButton = $("#contact-form input[type='submit']").addClass("disabled");
+    var $submitButton = $("#contact-form input[type='submit']").addClass("disabled");
 
     // Get some values from elements on the page:
     var $form = $( this ),
@@ -19,28 +19,25 @@
     // Send the data using post
     var posting = $.post( url, { element_0: element_0, element_1: element_1, element_2: element_2, element_counts: element_counts, embed: embed })
     .always(function () {
-      submitButton.val("Отправлено");
+      $form.addClass("disabled");
+      $submitButton.val("Отправлено");
+      $submitButton.addClass("success");
+      $form.find("input[type='reset']").addClass("hidden");
+      $form.find(".success-message").removeClass("hidden");
     })
     .done(function (data) {
-      submitButton.val("Получено");
+      $submitButton.val("Получено");
     });
   });
 
-
-  // custom spotlight buttons animations
-  $("#one li span.icon").hover(function () {
-    $(this).removeClass("style2").addClass("style1");
-  }, function () {
-    $(this).removeClass("style1").addClass("style2")
-  });
-
-  // map overlay
+  // map overlay disable
   $(".map-overlay").click(function () {
     $(this).fadeOut("fast", function() {
       $(this).addClass("hidden");
     });
   });
 
+  // map overlay enable
   $(".map-wrapper").mouseleave(function () {
     var mapOverlay = $('.map-overlay');
     if (mapOverlay.hasClass("hidden")) {
@@ -48,5 +45,35 @@
         $(this).removeClass("hidden");
       });
     }
+  });
+
+  // clever form auto-fill
+  $("a.autofill").click(function () {
+
+    var $form = $($(this).attr("href")), // works only if href represents #id of some form
+    dataTarget = $(this).attr("data-target"),
+    dataKey = $(this).attr("data-autofill"),
+    $target = $form.find("textarea[name="+dataTarget+"]"); // get target element of the form
+
+    var data = "";
+    switch (dataKey) {
+      case "book":
+        data = "Я хочу забронировать студию на 2 часа.";
+        break;
+      case "rent":
+        data = "Я хочу арендовать аппаратуру для концерта. Расскажу все подробности при разговоре.";
+        break;
+      case "mix":
+        data = "Я хочу заказать сведение записанного материала. Расскажу все подробности при разговоре.";
+        break;
+      case "courses":
+        data = "Я хочу записаться на курсы по барабанам.";
+        break;
+    }
+    $target.text(data);
+
+    setTimeout(function(){
+      $form.find("input:first").focus();
+    }, 1500);
   });
 })(jQuery);

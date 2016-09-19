@@ -1,3 +1,6 @@
+.hidden {
+  display: none !important; }
+
 #banner img.logo {
   display: block;
   position: relative;
@@ -13,26 +16,13 @@ header img.logo {
   padding: 0.4em 0 0 0;
   margin-right: 0.6em; }
 
-#banner h2 small {
-  display: block;
-  font-size: 0.5rem;
-  letter-spacing: 0.1em; }
-
-#one a {
-  text-decoration: none;
-  border-bottom: none; }
-
-#one li span.icon {
-  -o-transition: color 0.5s;
-  -moz-transition: color 0.5s;
-  -webkit-transition: color 0.5s;
-  transition: color 0.5s; }
-
 div.form {
   width: 400px; }
 
-#one ul.icons li {
-  margin-bottom: 3em; }
+input[type="button"].success,
+input[type="submit"].success,
+input[type="reset"].success {
+  background-color: #33ED6B !important; }
 
 .map-wrapper {
   position: relative; }
