@@ -33,16 +33,16 @@
   // map overlay disable
   $(".map-overlay").click(function () {
     $(this).fadeOut("fast", function() {
-      $(this).addClass("hidden");
+      $(this).addClass("no-overlay");
     });
   });
 
   // map overlay enable
   $(".map-wrapper").mouseleave(function () {
     var mapOverlay = $('.map-overlay');
-    if (mapOverlay.hasClass("hidden")) {
+    if (mapOverlay.hasClass("no-overlay")) {
       mapOverlay.fadeTo("slow", 0.5, function () {
-        $(this).removeClass("hidden");
+        $(this).removeClass("no-overlay");
       });
     }
   });
