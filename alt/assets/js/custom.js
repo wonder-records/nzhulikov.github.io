@@ -51,34 +51,12 @@
   $("a.autofill").click(function () {
 
     var $form = $($(this).attr("href")), // works only if href represents #id of some form
-    dataTarget = $(this).attr("data-target"),
-    dataKey = $(this).attr("data-autofill"),
-    $target = $form.find("textarea[name="+dataTarget+"]"); // get target element of the form
+      fillTarget = $(this).attr("fill-target"),
+      fillData = $(this).attr("fill-data");
+      
+    var $target = $form.find("textarea[name=" + fillTarget + "]"), // get target element of the form
+      data = $("#" + fillData).text();
 
-    var data = "";
-    switch (dataKey) {
-      case "book":
-        data = "Я хочу забронировать студию на 2 часа.";
-        break;
-      case "rent":
-        data = "Я хочу арендовать аппаратуру для концерта. Расскажу все подробности при разговоре.";
-        break;
-      case "mix":
-        data = "Я хочу заказать сведение записанного материала. Расскажу все подробности при разговоре.";
-        break;
-      case "vocal":
-        data = "Я хочу записаться на уроки вокала.";
-        break;
-      case "drums":
-        data = "Я хочу записаться на курсы по барабанам.";
-        break;
-      case "guitar":
-        data = "Я хочу записаться на уроки гитары.";
-        break;
-      case "sax":
-        data = "Я хочу записаться на уроки саксофона.";
-        break;
-    }
     $target.text(data);
 
     setTimeout(function(){
