@@ -30,21 +30,24 @@
     });
   });
 
-  // map overlay disable
-  $(".map-overlay").click(function () {
-    $(this).fadeOut("fast", function() {
-      $(this).addClass("no-overlay");
-    });
-  });
+  var disableMapOverlay = function ($overlay) {
+    $overlay.fadeOut("fast")
+      .addClass("no-overlay");
+  };
 
-  // map overlay enable
-  $(".map-wrapper").mouseleave(function () {
-    var mapOverlay = $('.map-overlay');
-    if (mapOverlay.hasClass("no-overlay")) {
-      mapOverlay.fadeTo("slow", 0.5, function () {
-        $(this).removeClass("no-overlay");
+  var enableMapOverlay = function ($overlay) {
+    if ($overlay.hasClass("no-overlay")) {
+      $overlay.fadeIn("slow", function () {
+        $overlay.removeClass("no-overlay");
       });
     }
+  };
+
+  $(".map-overlay").click(function () {
+    disableMapOverlay($(this));
+  });
+  $(".map-wrapper").mouseleave(function () {
+    enableMapOverlay($(this).find('.map-overlay'));
   });
 
   // clever form auto-fill
@@ -53,7 +56,7 @@
     var $form = $($(this).attr("href")), // works only if href represents #id of some form
       fillTarget = $(this).attr("fill-target"),
       fillData = $(this).attr("fill-data");
-      
+
     var $target = $form.find("textarea[name=" + fillTarget + "]"), // get target element of the form
       data = $("#" + fillData).text();
 
