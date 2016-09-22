@@ -30,6 +30,7 @@
     });
   });
 
+  // map overlay
   var disableMapOverlay = function ($overlay) {
     $overlay.fadeOut("fast")
       .addClass("no-overlay");
