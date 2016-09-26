@@ -7,20 +7,25 @@
         var tileWrapper = $('<div></div>', {
           'class': 'tile-wrapper'
         })
-        .appendTo(container)
-
-        var tile = $('<div></div>', {
-          'class': 'tile 2u 3u(medium) 6u(small) 12u$(xsmall)'
-        })
-        .appendTo(tileWrapper);
+        .appendTo(container);
 
         var tileCover = $('<div></div>', {
           'class': ['tile-cover']
         })
-        .appendTo(tile);
-        tileCover.css({
+        .css({
           'background-image': 'url(' + track.album.images[0].url + ')'
-        });
+        })
+        .appendTo(tileWrapper);
+
+        var tilePanel = $('<div></div>', {
+          'class': 'tile-panel 2u 3u(medium) 6u(small) 12u$(xsmall)'
+        })
+        .appendTo(tileWrapper);
+
+        var audioPlayer = $("<audio></audio>")
+        .attr('controls', true)
+        .attr('src', track.preview_url)
+        .appendTo(tilePanel);
 
         // example use below
     		// $('#randomSongTitle').html(track.name);

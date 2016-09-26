@@ -1,1 +1,1 @@
-.tiles{width:100vw}.tile-cover{background-position:center;background-size:cover;background-repeat:no-repeat}
+.tiles{width:100vw}@media screen{.tile-wrapper{width:100%;height:400px}}@media screen{.tile-panel{width:100%;height:100px}}.tile-cover{background-position:center;background-size:cover;background-repeat:no-repeat}@media screen{.tile-cover{height:300px}}
