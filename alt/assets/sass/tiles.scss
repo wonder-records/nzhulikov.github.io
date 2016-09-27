@@ -1,11 +1,14 @@
 @import "libs/_skel";
 
+
 .tiles {
   width: 100vw;
+  margin-left: 0;
 }
 
 .tile-wrapper {
   @include breakpoint(xsmall) {
+    padding-left: 0;
     width: 100%;
     height: 400px;
   }
