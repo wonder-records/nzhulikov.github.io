@@ -1,23 +1,27 @@
 @import "libs/_skel";
 
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
 
 .tiles {
-  width: 100vw;
-  margin-left: 0;
+  @include breakpoint(xsmall) {
+    width: 95vw;
+    margin: 2.5vw;
+    margin-top: 0;
+  }
 }
 
 .tile-wrapper {
   @include breakpoint(xsmall) {
+    padding-bottom: 10px;
     padding-left: 0;
     width: 100%;
-    height: 400px;
-  }
-}
-
-.tile-panel {
-  @include breakpoint(xsmall) {
-    width: 100%;
-    height: 100px;
+    height: 300px;
   }
 }
 
@@ -26,6 +30,34 @@
   background-size: cover;
   background-repeat: no-repeat;
   @include breakpoint(xsmall) {
-    height: 300px;
+    height: 100%;
+  }
+}
+
+.tile-panel {
+  @include breakpoint(xsmall) {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    padding-top: 50%;
+    opacity: 0;
+    @include prefix(transition, opacity 0.5s ease, webkit o moz);
+
+    &:hover {
+      opacity: 1;
+      background: rgba(0,0,0,0.2);
+      @include prefix(background-image, linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), webkit moz o);
+    }
+
+    h1, h2, h3 {
+      white-space: nowrap;
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+    }
+
+    p {
+      overflow-y: hidden !important;
+      text-overflow: ellipsis;
+    }
   }
 }

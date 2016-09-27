@@ -5,12 +5,12 @@
       tracks.forEach(function (track) {
 
         var tileWrapper = $('<div></div>', {
-          'class': 'tile-wrapper'
+          'class': 'tile-wrapper 2u 3u(medium) 6u(small) 12u$(xsmall)'
         })
         .appendTo(container);
 
         var tileCover = $('<div></div>', {
-          'class': ['tile-cover']
+          'class': 'tile-cover'
         })
         .css({
           'background-image': 'url(' + track.album.images[0].url + ')'
@@ -18,14 +18,15 @@
         .appendTo(tileWrapper);
 
         var tilePanel = $('<div></div>', {
-          'class': 'tile-panel 2u 3u(medium) 6u(small) 12u$(xsmall)'
+          'class': 'tile-panel'
         })
-        .appendTo(tileWrapper);
+        .append($('<h3></h3>').text(track.name))
+        .append($('<p></p>').text(track.artists[0].name))
+        .appendTo(tileCover);
 
         var audioPlayer = $("<audio></audio>")
-        .attr('controls', true)
         .attr('src', track.preview_url)
-        .appendTo(tilePanel);
+        .appendTo(tileWrapper);
 
         // example use below
     		// $('#randomSongTitle').html(track.name);
