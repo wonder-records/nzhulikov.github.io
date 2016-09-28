@@ -5,7 +5,7 @@
       tracks.forEach(function (track) {
 
         var tileWrapper = $('<div></div>', {
-          'class': 'tile-wrapper 3u 4u(medium) 6u(small) 12u$(xsmall)'
+          'class': 'tile-wrapper 2u 3u(large) 4u(medium) 6u(small) 12u$(xsmall)'
         })
         .appendTo(container);
 
