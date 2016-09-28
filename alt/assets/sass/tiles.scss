@@ -55,11 +55,11 @@
       opacity: 0.3;
     }
 
-    &.playback-icon:before {
+    &.play:before {
       opacity: 1;
     }
 
-    &.pause-icon:before {
+    &.pause:before {
       opacity: 1;
     }
   }
@@ -73,7 +73,7 @@
   }
 }
 
-.playback-icon:before {
+.play:before {
   @include vendor('transition', 'opacity 0.5s ease');
   opacity: .4;
   content: "\f04b";
@@ -90,8 +90,8 @@
   transform: translate(-50%, -50%);
 }
 
-.pause-icon:before {
-  @extend .playback-icon;
+.pause:before {
+  @extend .play;
   content: "\f04c";
 }
 

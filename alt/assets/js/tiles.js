@@ -17,30 +17,54 @@
         })
         .appendTo(tileWrapper);
 
+        var audioPlayer = $('<audio></audio>')
+        .attr('id', track.id)
+        .attr('src', track.preview_url)
+        .appendTo(tileWrapper);
+
         var tilePanel = $('<div></div>', {
-          'class': 'tile-panel playback-icon'
+          'class': 'tile-panel play'
         })
-        .on('click', function (event) {
-          event.preventDefault();
-          $panel = $(this);
-
-          if (!$panel.hasClass('pause-icon')) {
-            $('.pause-icon').removeClass('pause-icon').addClass('playback-icon');
-          }
-
-          $panel.toggleClass('pause-icon');
-          $panel.toggleClass('playback-icon');
-        })
+        // .on('click', function (event) {
+        //   event.preventDefault();
+        //   $panel = $(this);
+        //
+        //   if (!$panel.hasClass('pause')) {
+        //     $('.pause').removeClass('pause').addClass('play').find('audio').pause();
+        //   }
+        //
+        //   $panel.toggleClass('pause');
+        //   $panel.toggleClass('play');
+        // })
+        .attr('data-audio', track.id)
         .append($('<div></div>', {
             'class': 'tile-text'
           })
           .append($('<h3></h3>').text(track.name))
           .append($('<p></p>').text(track.artists[0].name))
-        ).appendTo(tileCover);
+        )
+        .on('click', function (event) {
+          event.preventDefault();
+          var $panel = $(this);
+          var $player = $('#' + $panel.attr('data-audio'))[0];
+          if ($panel.hasClass('play')) {
+            $('.pause').each(function (index, element) {
+              var $element = $(element);
+              var $elementPlayer = $('#' + $element.attr('data-audio'))[0];
+              $elementPlayer.pause();
+              $element.removeClass('pause').addClass('play');
+            });
 
-        var audioPlayer = $("<audio></audio>")
-        .attr('src', track.preview_url)
-        .appendTo(tileWrapper);
+            $player.play();
+            $panel.removeClass('play');
+            $panel.addClass('pause');
+          } else {
+            $player.pause();
+            $panel.removeClass('pause');
+            $panel.addClass('play');
+          }
+        })
+        .appendTo(tileCover);
 
         // example use below
     		// $('#randomSongTitle').html(track.name);
