@@ -28,9 +28,11 @@
 }
 
 .tile-wrapper {
+  position: relative;
   height: 300px;
   padding-left: 1.5em;
   padding-bottom: 1.5em;
+  text-overflow: ellipsis;
 }
 
 .tile-cover {
@@ -45,21 +47,56 @@
   position: relative;
   height: 100%;
 
-  opacity: 0;
-  background: rgba(0,0,0,0.2);
-  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5));
-  @include vendor('transition', 'opacity 0.5s ease');
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
 
   &:hover {
-    opacity: 1;
+
+    .tile-text {
+      opacity: 0.3;
+    }
+
+    &.playback-icon:before {
+      opacity: 1;
+    }
+
+    &.pause-icon:before {
+      opacity: 1;
+    }
   }
 
   @include breakpoint(small) {
-    opacity: 1;
+    background: rgba(0,0,0,0.2);
+
+    .tile-text {
+      opacity: 1;
+    }
   }
 }
 
+.playback-icon:before {
+  @include vendor('transition', 'opacity 0.5s ease');
+  opacity: .4;
+  content: "\f04b";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  /*--adjust as necessary--*/
+  position: absolute;
+  color: white;
+  font-size: 4em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pause-icon:before {
+  @extend .playback-icon;
+  content: "\f04c";
+}
+
 .tile-text {
+  @include vendor('transition', 'opacity 0.5s ease');
 
   position: absolute;
   width: 100%;

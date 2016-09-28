@@ -18,7 +18,18 @@
         .appendTo(tileWrapper);
 
         var tilePanel = $('<div></div>', {
-          'class': 'tile-panel'
+          'class': 'tile-panel playback-icon'
+        })
+        .on('click', function (event) {
+          event.preventDefault();
+          $panel = $(this);
+
+          if (!$panel.hasClass('pause-icon')) {
+            $('.pause-icon').removeClass('pause-icon').addClass('playback-icon');
+          }
+
+          $panel.toggleClass('pause-icon');
+          $panel.toggleClass('playback-icon');
         })
         .append($('<div></div>', {
             'class': 'tile-text'
