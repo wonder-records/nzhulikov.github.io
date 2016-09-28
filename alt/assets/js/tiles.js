@@ -5,7 +5,7 @@
       tracks.forEach(function (track) {
 
         var tileWrapper = $('<div></div>', {
-          'class': 'tile-wrapper 2u 3u(medium) 6u(small) 12u$(xsmall)'
+          'class': 'tile-wrapper 3u 4u(medium) 6u(small) 12u$(xsmall)'
         })
         .appendTo(container);
 
@@ -20,9 +20,12 @@
         var tilePanel = $('<div></div>', {
           'class': 'tile-panel'
         })
-        .append($('<h3></h3>').text(track.name))
-        .append($('<p></p>').text(track.artists[0].name))
-        .appendTo(tileCover);
+        .append($('<div></div>', {
+            'class': 'tile-text'
+          })
+          .append($('<h3></h3>').text(track.name))
+          .append($('<p></p>').text(track.artists[0].name))
+        ).appendTo(tileCover);
 
         var audioPlayer = $("<audio></audio>")
         .attr('src', track.preview_url)
