@@ -1,17 +1,232 @@
----
-layout: default
----
-<!-- Posts -->
-<ul id="posts">
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>Wonder Records - студия звукозаписи в Новороссийске</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Студия звукозаписи в городе Новороссийске с доступными ценами и широким спектром услуг: студийная или живая звукозаписи, аренда звуковой аппаратуры, репетиционная точка, сведение, мастеринг, а также уроки вокала, уроки игры на барабанах, гитаре, саксофоне." />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.min.css" />
+	<link rel="stylesheet" href="assets/css/custom.min.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+</head>
+<body class="landing">
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+		<!-- Header -->
+		<header id="header" class="alt">
+			<h1><a href="index.html">
+				<img class="header-logo" src="images/logo.svg" alt="Wonder Records Logo">
+				Wonder Records</a>
+			</h1>
+			<nav id="nav">
+				<ul>
+					<li class="special">
+						<a href="#menu" class="menuToggle"><span>Меню</span></a>
+						<div id="menu">
+							<ul>
+								<li><a href="index.html">Главная</a></li>
+								<li><a href="services.html">Услуги и цены</a></li>
+								<li><a href="releases.html">Релизы</a></li>
+								<li><a href="blog.html">Блог</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
-	{% for post in paginator.posts %}
+		<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+				<img class="banner-logo" src="images/logo.svg" alt="Wonder Records Logo">
+				<h2>Wonder Records</h2>
+				<p>Музыкальная студия Новороссийска<br>
+				</p>
+				<ul class="actions">
+					<li><a href="#contact-form" fill-target="element_2" fill-data="book" class="autofill button special scrolly">Забронировать</a></li>
+				</ul>
+			</div>
+			<a href="#one" class="more scrolly">Узнайте больше</a>
+		</section>
 
-	  <li class="post">
-	  	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
-	  	<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
-	  	<p>{{ post.content | strip_html | truncatewords:50 }}</p>
-	  </li>
+		<!-- One -->
+		<section id="one" class="wrapper style1 special">
+			<div class="inner">
+				<header class="major">
+					<h2>Привет!</h2>
+					<p>Мы рады видеть вас на сайте музыкальной студии Wonder Records в Новороссийске. <br>
+						Приходя к нам, вы открываете для себя множество интересных возможностей. <br>
+						Прочитайте, например, про наши <a href="#three" class="scrolly">акции</a>.</p>
+				</header>
+			</div>
+		</section>
 
-    {% endfor %}
+	<!-- Two -->
+	<section id="two" class="wrapper alt style2">
+			<section id="sl-book" class="spotlight">
+			<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
+			<h2>Забронируйте студию<br />
+			и делайте то, что вам нужно</h2>
+			<p>Арендуйте нашу уютную студию для репетиций и записи барабанов, гитар или вокала. Соберите друзей и оторвитесь всей группой, сделав классную живую запись. <a href="#contact-form" class="autofill scrolly" fill-target="element_2" fill-data="book">Сообщите нам</a>, когда вы хотите прийти.</p>
+			</div>
+			</section>
 
-</ul>
+			<section id="sl-rent" class="spotlight">
+			<div class="image"><img src="images/pic02.jpg" alt="" /></div>
+			<div class="content">
+			<h2>Арендуйте аппаратуру<br />
+			для вашего вечера</h2>
+			<p>От тусовки с друзьями до фестиваля на открытом воздухе, вы можете наполнить свое незабываемое событие качественным и приятным звуком. Мы всё доставим и настроим, так что <a href="#contact-form" class="autofill scrolly" fill-target="element_2" fill-data="rent">аренда звука</a> &mdash; не проблема!</p>
+			</div>
+			</section>
+			<section id="sl-mix" class="spotlight">
+			<div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
+				<h2>Закажите сведение<br />
+					и мастеринг</h2>
+					<p><a href="#contact-form" class="autofill scrolly" fill-target="element_2" fill-data="mix">Отправьте нам</a> свой записанный материал, и профессиональный звукоинженер сведет его с гарантией качества. Мы также делаем цифровой мастеринг.</p>
+				</div>
+			</section>
+			<section id="sl-learn" class="spotlight">
+				<div class="image"><img src="images/pic04.jpg" alt="" /></div><div class="content">
+					<h2>Берите уроки</h2>
+					<p>Опытные инструкторы помогут сделать ваше исполнение уверенным, выразительным и намного более профессиональным. Вы можете записаться на курсы <a href="#contact-form" class="autofill scrolly" fill-target="element_2" fill-data="vocal">вокала</a>, <a href="#contact-form" class="autofill scrolly" fill-target="element_2" fill-data="drums">ударных</a>, <a href="#contact-form" class="autofill scrolly" fill-target="element_2" fill-data="guitar">гитары</a>, <a href="#contact-form" class="autofill scrolly" fill-target="element_2" fill-data="sax">саксофона.</a></p>
+				</div>
+			</section>
+		</section>
+
+		<!-- Three -->
+		<section id="three" class="wrapper style3 special">
+			<div class="inner">
+				<header class="major">
+					<h2>Специальные предложения</h2>
+					<p>Следите за новостями студии<br />
+						и будьте в курсе всех скидок и акций.</p>
+				</header>
+				<ul class="features">
+					<li class="icon fa-moon-o">
+						<h3>1001/Ночь</h3>
+						<p>Забронируйте студию на целую ночь всего за 1001 рубль. Волшебство, не иначе.</p>
+					</li>
+					<li class="icon fa-birthday-cake">
+						<h3>Задуем свечи</h3>
+						<p>Саунд-система мощностью 6 кВт с сабвуферами, усилителями и микрофонами для поздравлений за 10 т. р. Только в день рождения!</p>
+					</li>
+					<li class="icon fa-music">
+						<h3>Всё сходится</h3>
+						<p>Сведение мультитрека, записанного на нашей студии методом “overdub” &mdash; бесплатно.</p>
+					</li>
+					<li class="icon fa-child">
+						<h3>Береги ритм смолоду</h3>
+						<p>Юным барабанщикам (до 12 лет), а также их родителям &mdash; скидка 25&#37; на занятия.</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style4">
+			<div class="inner">
+				<header>
+					<h2>Не стесняйтесь</h2>
+					<p>Напишите нам прямо сейчас. Расскажите о ваших планах. Мы обязательно найдем способ их осуществить, как делали это уже не раз.</p>
+				</header>
+				<ul class="actions vertical">
+					<li><a href="#contact-form" class="more scrolly button fit special">Написать нам</a></li>
+					<li><a href="services.html" class="button fit">Услуги и цены</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="wrapper style2">
+			<div class="inner">
+				<form id="contact-form" accept-charset="utf-8" enctype="multipart/form-data" method="post" action="http://www.emailmeform.com/builder/form/8cTu3z1M0cb1nAs09" novalidate>
+
+					<div class="row uniform">
+						<div class="6u 12u$(xsmall)">
+							<input type="text" name="element_0" value="" placeholder="Как Вас зовут?" />
+						</div>
+
+						<div class="6u 12u$(xsmall)">
+							<input type="text" name="element_1" value="" placeholder="Как с Вами связаться?"/>
+						</div>
+
+						<div class="12u$">
+							<textarea name="element_2" rows="9" placeholder="Чем мы можем Вам помочь?"></textarea>
+						</div>
+						<input name="element_counts" value="3" type="hidden" />
+						<input name="embed" value="forms" type="hidden" />
+						<div class="12u$">
+							<ul class="actions">
+								<li><input type="submit" value="Отправить" class="special"></li>
+								<li><input type="reset" value="Очистить"></li>
+								<li><span class="success-message hidden">Все получилось! Скоро мы с вами свяжемся.</span></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="hidden">
+						<span id="book">Я хочу забронировать студию на 2 часа.</span>
+						<span id="rent">Я хочу арендовать аппаратуру для концерта. Расскажу все подробности при разговоре.</span>
+						<span id="mix">Я хочу заказать сведение записанного материала. Расскажу все подробности при разговоре.</span>
+						<span id="vocal">Я хочу записаться на уроки вокала.</span>
+						<span id="drums">Я хочу записаться на курсы по барабанам.</span>
+						<span id="guitar">Я хочу записаться на уроки гитары.</span>
+						<span id="sax">Я хочу записаться на уроки саксофона.</span>
+					</div>
+				</form>
+				<div id="contact-form-result"></div>
+			</div>
+		</section>
+
+		<section id="map" class="map-wrapper">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Rk63GljqvIVi-Hjzcdgv1hDPa6GXE4Dc&amp;width=100%&amp;height=300&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+			<div class="map-overlay">
+				<span class="map-address">353925, Россия, Краснодарский край,<br>
+					г. Новороссийск, пр. Дзержинского, 211, корпус 1<br>
+				</span>
+				<span class="map-contacts">Евгений, <a href="tel://+79887694458">+7 (988) 769-44-58</a><br>
+					Олег, <a href="tel://+79887696500">+7 (988) 769-65-00</a>
+				</span>
+			</div>
+		</section>
+
+		<section id="next" class="wrapper style2">
+			<div class="inner">
+				<header>
+					<h2>Что дальше?</h2>
+					<p>Следите за обновлениями нашего блога, где мы будем рассказывать о скидках и акциях, мероприятиях, релизах и многом другом.</p>
+				</header>
+				<ul class="actions horizontal">
+					<li><a href="#" class="more button fit">Читать блог</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="tel://89887694458" class="icon fa-phone"><span class="label">Phone</span></a></li>
+				<li><a href="https://vk.com/wonder.records" class="icon fa-vk"><span class="label">Vkontakte</span></a></li>
+				<li><a href="https://www.instagram.com/wonder.records/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="mailto://w.records@yander.ru" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Wonder Records</li>
+			</ul>
+		</footer>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/emailme-form.js"></script>
+	<script src="assets/js/custom.js"></script>
+</body>
+</html>
