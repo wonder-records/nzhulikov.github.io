@@ -1,6 +1,13 @@
 pipeline {
   agent any
   stages {
+    stage('Preparing') {
+      steps {
+        echo "Preparing"
+        sh "npm install gulp-cli -g"
+        sh "npm install"
+      }
+    }
     stage('Build') {
       steps {
         echo "Building"
