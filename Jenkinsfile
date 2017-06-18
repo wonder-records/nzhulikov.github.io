@@ -3,12 +3,14 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'node node_modules/gulp/bin/gulp.js build'
+        echo "Building"
+        sh "node node_modules/.bin/gulp.js build"
       }
     }
     stage('Deploy') {
       steps {
-        sh 'node node_modules/gulp/bin/gulp.js deploy'
+        echo "Deploying"
+        sh "node node_modules/.bin/gulp.js deploy"
       }
     }
   }
