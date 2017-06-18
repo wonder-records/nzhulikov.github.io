@@ -6,12 +6,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh(script: "\"${env.NODE_PATH}/gulp\" build", returnStdout: true)
+        cmd /c call "\"${env.NODE_PATH}/gulp\" build"
       }
     }
     stage('Deploy') {
       steps {
-        sh(script: "\"${env.NODE_PATH}/gulp\" deploy", returnStdout: true)
+        cmd /c call "\"${env.NODE_PATH}/gulp\" deploy"
       }
     }
   }
