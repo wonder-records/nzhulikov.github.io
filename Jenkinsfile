@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-        NODE_PATH = '%AppData%/npm/node_modules/'
+        NODE_PATH = "~/AppData/Roaming/npm/node_modules/"
     }
   stages {
     stage('Build') {
