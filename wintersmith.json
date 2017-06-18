@@ -1,11 +1,11 @@
 {
   "locals": {
-    "url": "http://vbk0002wspc:80",
+    "url": "http://localhost:80",
     "name": "Wonder Records",
     "owner": "Wonder Records",
     "description": "Студия звукозаписи в Новороссийске"
   },
-  "output": "./dist",
+  "output": "./www",
   "plugins": [
     "./plugins/paginator.coffee"
   ],
