@@ -6,12 +6,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        node node_modules\gulp\bin\gulp.js build
+        node node_modules/gulp/bin/gulp.js build
       }
     }
     stage('Deploy') {
       steps {
-        node node_modules\gulp\bin\gulp.js build
+        node node_modules/gulp/bin/gulp.js build
       }
     }
   }
