@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo "Preparing"
         sh "npm install"
+        sh "npm rebuild node_modules/node-sass -f"
       }
     }
     stage('Build') {
