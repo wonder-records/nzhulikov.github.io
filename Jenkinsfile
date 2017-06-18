@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        gulp build
+        sh(script: "gulp build", returnStdout: true)
       }
     }
     stage('Deploy') {
       steps {
-        gulp deploy
+        sh(script: "gulp deploy", returnStdout: true)
       }
     }
   }
