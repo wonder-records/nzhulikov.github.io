@@ -1,13 +1,14 @@
 {
   "locals": {
-    "url": "http://localhost:80",
+    "url": "http://wrecords.ru",
     "name": "Wonder Records",
     "owner": "Wonder Records",
     "description": "Студия звукозаписи в Новороссийске"
   },
   "output": "./www",
   "plugins": [
-    "./plugins/paginator.coffee"
+    "./plugins/paginator.coffee",
+    "wintersmith-cname"
   ],
   "require": {
     "moment": "moment",
