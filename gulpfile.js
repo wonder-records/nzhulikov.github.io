@@ -36,6 +36,7 @@ gulp.task('deploy', function() {
     .pipe(deploy({
       prefix: 'www',
       repository: 'https://github.com/wonder-records/website.git',
-      remoteBranch:   ['gh-pages']
+      remoteBranch:   ['gh-pages'],
+      message: 'Deploy'
     }));
 });
