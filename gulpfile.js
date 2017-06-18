@@ -4,8 +4,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var wintersmith = require('wintersmith');
-var deploy = require('gulp-deploy-git');
-var gitignore = require('gulp-gitignore');
+var ghPages = require('gulp-gh-pages');
 
 var env = wintersmith('./wintersmith.json');
 var scssPath = './_scss/*.scss';
@@ -33,10 +32,5 @@ gulp.task('preview', ['scss:watch'], function() {
 
 gulp.task('deploy', function() {
   return gulp.src('www/**/*', { read: false })
-    .pipe(deploy({
-      prefix: 'www',
-      repository: 'https://github.com/wonder-records/website.git',
-      remoteBranch:   ['gh-pages'],
-      message: 'Deploy'
-    }));
+    .pipe(ghPages());
 });
