@@ -2,28 +2,28 @@ node {
   stage 'Checkout'
 
   checkout scm
-  sh 'git submodule update --init'
+  sh "git submodule update --init"
 
   stage 'Build'
 
-  echo 'Building branch ${env.BRANCH_NAME}'
+  echo "Building branch ${env.BRANCH_NAME}"
 
   try {
-      sh 'gulp build'
-      currentBuild.result = 'SUCCESS'
+      sh "gulp build"
+      currentBuild.result = "SUCCESS"
   } catch (Exception err) {
-      currentBuild.result = 'FAILURE'
+      currentBuild.result = "FAILURE"
   }
-  echo 'RESULT: ${currentBuild.result}'
+  echo "RESULT: ${currentBuild.result}"
 
   stage 'Deploy'
 
   when {
       expression {
-        currentBuild.result == null || currentBuild.result == 'SUCCESS'
+        currentBuild.result == null || currentBuild.result == "SUCCESS"
       }
   }
 
-  echo 'Deploying branch ${env.BRANCH_NAME}'
-  sh 'gulp deploy'
+  echo "Deploying branch ${env.BRANCH_NAME}"
+  sh "gulp deploy"
 }
