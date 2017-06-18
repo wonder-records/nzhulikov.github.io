@@ -1,0 +1,37 @@
+[
+  {
+    "id": "studio",
+    "href": "/",
+    "title": "Студия"
+  },
+  {
+    "id": "equipment",
+    "href": "/equipment.html",
+    "title": "Оборудование"
+  },
+  {
+    "id": "examples",
+    "href": "/examples.html",
+    "title": "Примеры работ"
+  },
+  {
+    "id": "prices",
+    "href": "/prices.html",
+    "title": "Цены"
+  },
+  {
+    "id": "contacts",
+    "href": "/contacts.html",
+    "title": "Контакты"
+  },
+  {
+    "id": "news",
+    "href": "/news.html",
+    "title": "Новости"
+  },
+  {
+    "id": "novodrum",
+    "href": "/articles/novodrum-school/",
+    "title": "Школа ударных"
+  }
+]

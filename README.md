@@ -1,2 +1,2 @@
-# wrecords.github.io
-Wonder Records - профессиональная студия звукозаписи
+# Студия звукозаписи Wonder Records
+Официальный веб-сайт студии. Доступен по адресу: http://wrecords.ru/

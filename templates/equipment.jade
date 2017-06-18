@@ -1,0 +1,35 @@
+extends layout
+block link
+  - var selectedMenuItem = 'equipment';
+block content
+  .row
+    .col-xs-12.col-md-8
+      header.page-header
+        h2 Наше оборудование
+          br
+          small Мы используем только качественное оборудование.
+      table.table.table-striped
+        thead
+          tr
+            th Производитель
+            th Модель
+            th Количество
+            th.hidden-xs Информация
+        tbody
+          each gearGroup in contents.studio['gear.json'].metadata
+            tr
+              td(colspan='4')
+                strong= gearGroup.name
+            each gearItem in gearGroup.items
+              - var isRequestingGear = typeof gearItem.category !== 'undefined' && gearItem.category === 'requesting';
+              tr(class= isRequestingGear ? 'warning' : '')
+                td= gearItem.manufacturer
+                td= gearItem.model
+                td= gearItem.count
+                td.hidden-xs= gearItem.info
+                  if isRequestingGear
+                    | &nbsp;
+                    sup *
+          tr
+            td(colspan=4)
+              em * - Данный инструмент не входит в постоянное оснащение студии Wonder Records и не является собственностью студии. Использование данного инструмента возможно только по предварительному согласованию. За использование, транспортировку или аренду данного инструмента может взиматься отдельная плата, подробности уточняйте у сотрудников студии.
