@@ -2,14 +2,14 @@ node {
   stage 'Checkout'
 
   checkout scm
-  sh "git submodule update --init"
+  git submodule update --init
 
   stage 'Build'
 
   echo "Building branch ${env.BRANCH_NAME}"
 
   try {
-      sh "gulp build"
+      gulp build
       currentBuild.result = "SUCCESS"
   } catch (Exception err) {
       currentBuild.result = "FAILURE"
@@ -25,5 +25,5 @@ node {
   }
 
   echo "Deploying branch ${env.BRANCH_NAME}"
-  sh "gulp deploy"
+  gulp deploy
 }
