@@ -1,1 +1,1 @@
-node gulp build
+node "%NODE_PATH%/gulp build
