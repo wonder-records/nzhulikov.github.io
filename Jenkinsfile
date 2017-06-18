@@ -1,12 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('Build') {
       steps {
         gulp build
       }
     }
-    stage('deploy') {
+    stage('Deploy') {
       steps {
         gulp deploy
       }
