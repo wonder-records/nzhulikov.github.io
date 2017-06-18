@@ -31,6 +31,6 @@ gulp.task('preview', ['scss:watch'], function() {
 });
 
 gulp.task('deploy', function() {
-  return gulp.src('www/**/*', { read: false })
+  return gulp.src('www/**/*')
     .pipe(ghPages());
 });
