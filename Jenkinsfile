@@ -11,7 +11,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        call node "${env.NODE_PATH}/gulp" deploy
+        call deploy.cmd
       }
     }
   }
