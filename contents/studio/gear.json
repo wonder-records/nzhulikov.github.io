@@ -3,6 +3,12 @@
     "name": "Микшерные пульты",
     "items": [
       {
+        "manufacturer": "Presonus",
+        "model": "StudioLive 32.4.2AI",
+        "count": "1",
+        "info": "Цифровой, 32 канала"
+      },
+      {
         "manufacturer": "Midas",
         "model": "Venice 240",
         "count": "1",
@@ -263,6 +269,17 @@
         "count": "-",
         "info": "Различные перкуссионные инструменты: конги, бонги, джембе, шейкеры, тамбурины, бубны и прочее",
         "category": "requesting"
+      }
+    ]
+  },
+  {
+    "name": "DAW",
+    "items": [
+      {
+        "manufacturer": "Presonus",
+        "model": "Studio One Artist 2",
+        "count": "1",
+        "info": "Аудиоредактор и MIDI-секвенсер для создания и записи музыки. Содержит набор инструментов для записи, обработки, микширования и мастеринга."
       }
     ]
   }

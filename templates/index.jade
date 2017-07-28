@@ -4,8 +4,6 @@ block link
 
 block content
   .row
-    .col-xs-12.col-md-4.pull-right
-      include snippets/blablacar_vert
     .col-xs-12.col-md-8
       header.page-header
         h2 Студия звукозаписи &laquo;Wonder Records&raquo;
@@ -51,6 +49,6 @@ block content
           each photo, i in contents.studio['photos.json'].metadata
             li.list-group-item(data-target='#wrStudioTour', data-slide-to= i)
               img(src= photo.thumbnail, alt= photo.alt)
-    #wrCalendar.col-xs-12.col-md-8
+    //#wrCalendar.col-xs-12.col-md-8
       h3 Расписание студии
       iframe(src='https://calendar.google.com/calendar/embed?showTitle=0&showNav=0&showPrint=0&showCalendars=0&mode=AGENDA&height=600&wkst=2&bgcolor=%23FFFFFF&src=n9fbnrppkp68nu1qu566rlnf9g%40group.calendar.google.com&color=%23711616&ctz=Europe%2FMoscow', style='border-width:0', width='100%', height='600', frameborder='0', scrolling='yes')

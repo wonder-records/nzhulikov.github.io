@@ -1,8 +1,14 @@
 [
   {
+    "url": "/img/studio/photo2.jpg",
+    "thumbnail": "/img/studio/photo2.thumbnail.jpg",
+    "caption": "Студия A",
+    "alt": "Помещение на улице Победы"
+  },
+  {
     "url": "/img/studio/photo1.jpg",
     "thumbnail": "/img/studio/photo1.thumbnail.jpg",
-    "caption": "Помещение на заводе Прибой",
+    "caption": "Студия Б",
     "alt": "Помещение на заводе Прибой"
   }
 ]

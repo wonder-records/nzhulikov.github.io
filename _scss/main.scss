@@ -132,7 +132,7 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 
-#wrYandexMap {
+.wrYandexMap {
   box-shadow: 3px 2px 5px transparentize($second-color, 0.7);
   &:active {
     box-shadow: 3px 2px 8px transparentize($second-color, 0.5);
