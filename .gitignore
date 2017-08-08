@@ -41,3 +41,6 @@ www
 
 # Remote deployment repos
 deploy-*
+
+# Gulp github deploy plugin
+.public
