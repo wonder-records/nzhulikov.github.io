@@ -1,0 +1,37 @@
+[
+	{
+		"id": "studio-1",
+		"title": "Студия А",
+		"address_1": "353900, Россия, Краснодарский край,",
+		"address_2": "г. Новороссийск, ул. Сипягина, 7а",
+		"map": "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac4b3fb5c7af5f80a7e4dd5206cbf88b845edb57e6fabb39f4bf0b04e3b2a9e21&width=768&height=345&lang=ru_RU&scroll=true",
+		"contacts": 
+		[
+			{
+				"name": "Евгений",
+				"phone": "+7 (988) 769-44-58",
+				"link": "tel://+79887694458"
+			}
+		]
+	},
+	{
+		"id": "studio-2",
+		"title": "Студия Б",
+		"address_1": "353925, Россия, Краснодарский край,",
+		"address_2": "г. Новороссийск, пр. Дзержинского, 211, корпус 1",
+		"map": "https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Rk63GljqvIVi-Hjzcdgv1hDPa6GXE4Dc&amp;width=753&amp;height=345&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true",
+		"contacts": 
+		[
+			{
+				"name": "Руслан",
+				"phone": "+7 (908) 684-94-72",
+				"link": "tel://+79086849472"
+			},
+			{
+				"name": "Антон",
+				"phone": "+7 (965) 466-67-42",
+				"link": "tel://+79654666742"
+			}
+		]
+	}
+]

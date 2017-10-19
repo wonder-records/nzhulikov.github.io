@@ -31,41 +31,29 @@ block content
         i.glyphicon.glyphicon-link
         a(href="https://vk.com/wonder.records") &nbsp;Группа "Вконтакте"
       div
-        ul.nav.nav-tabs(role="tablist")
-          li.active(role="presentation")
-            a(href="#studio-1-tab",aria-controls="studio-1-tab",role="tab",data-toggle="tab") Студия А
-          li(role="presentation")
-            a(href="#studio-2-tab",aria-controls="studio-2-atb",role="tab",data-toggle="tab") Студия Б
+        ul.nav.nav-tabs(role="tablist") 
+          each studio,index in contents.studio['contacts.json'].metadata
+            -var applyClass = (index == 0) ? 'active' : ''
+            li(role="presentation", class=applyClass)
+              a(href="#"+studio.id,aria-controls=studio.id,role="tab",data-toggle="tab") #{studio.title}
 
         div.tab-content
-          div#studio-1-tab.tab-pane.active(role="tabpanel")
-            h4 Студия А
-            p
-              i.glyphicon.glyphicon-phone
-              a(href="tel://+79887694458") +7 (988) 769-44-58
-              | ,&nbsp;Евгений
-              br
-            address
-              p
-              | 353900, Россия, Краснодарский край,
-              br
-              | г. Новороссийск, ул. Сипягина, 7а
-            .wrYandexMap
-              script(type='text/javascript', charset='utf-8', async='', src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac4b3fb5c7af5f80a7e4dd5206cbf88b845edb57e6fabb39f4bf0b04e3b2a9e21&width=768&height=345&lang=ru_RU&scroll=true')
-          div#studio-2-tab.tab-pane(role="tabpanel")
-            h4 Студия Б
-            p
-              i.glyphicon.glyphicon-phone
-              a(href="tel://+79086849472") +7 (908) 684 94 72
-              | ,&nbsp;Руслан
-              br
-            address
-              p
-              | 353925, Россия, Краснодарский край,
-              br
-              | г. Новороссийск, пр. Дзержинского, 211, корпус 1
-            .wrYandexMap
-                script(type='text/javascript', charset='utf-8', async, src='https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Rk63GljqvIVi-Hjzcdgv1hDPa6GXE4Dc&amp;width=753&amp;height=345&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true')
-
+          each studio,index in contents.studio['contacts.json'].metadata
+            -var applyClass = (index == 0) ? 'tab-pane active' : 'tab-pane'
+            div(id=studio.id, role="tabpanel", class=applyClass)
+              h4 #{studio.title}
+              each contact in studio.contacts
+                p
+                  i.glyphicon.glyphicon-phone
+                  a(href=contact.link) #{contact.phone}
+                  | ,&nbsp;#{contact.name}
+                  br
+              address
+                p
+                | #{studio.address_1}
+                br
+                | #{studio.address_2}
+              .wrYandexMap
+                script(type='text/javascript', charset='utf-8', async, src=studio.map)
 block customScripts
 script(src=contents.js['emailme-form.js'].url)
