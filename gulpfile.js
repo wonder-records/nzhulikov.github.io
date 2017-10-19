@@ -30,11 +30,11 @@ gulp.task('preview', ['scss:watch'], function() {
     });
 });
 
-gulp.task('deploy:prepare', function() {
-  gulp.src(".git").pipe(gulp.dest('.publish/'));
+gulp.task('prepare', function() {
+  return gulp.src(".git/**/*").pipe(gulp.dest('.publish/.git/'));
 });
 
-gulp.task('deploy', ['deploy:prepare'], function() {
+gulp.task('deploy', ['build', 'prepare'], function() {
   return gulp.src('www/**/*')
     .pipe(ghPages());
 });

@@ -36,6 +36,9 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# Generated css
+contents/css
+
 # Wintersmith build directory
 www
 
@@ -43,4 +46,4 @@ www
 deploy-*
 
 # Gulp github deploy plugin
-.public
+.publish
