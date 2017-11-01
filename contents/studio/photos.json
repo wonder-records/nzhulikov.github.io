@@ -10,5 +10,11 @@
     "thumbnail": "/img/studio/photo1.thumbnail.jpg",
     "caption": "Студия Б",
     "alt": "Помещение на заводе Прибой"
+  },
+  {
+    "url": "/img/studio/photo3.jpg",
+    "thumbnail": "/img/studio/photo3.thumbnail.jpg",
+    "caption": "Школа барабанов",
+    "alt": "Индивидуальные уроки игры на барабанах с дипломированным педагогом"
   }
 ]
